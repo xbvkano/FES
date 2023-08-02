@@ -928,3 +928,74 @@ body{
 .SampleButton.X{
     left: 280px;
 }
+
+.GridForSixSelections{
+    position: relative;
+    display: grid;
+    width: 800px;
+    height: 230px;
+
+
+    grid-template-rows: 270px;
+    grid-template-columns: repeat(12, 1fr);
+
+    bottom: 127px;
+    left: 450px;
+}
+
+.TemplateForSliderSetting{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.TextForSlider{
+    position: absolute;
+    display: inline-block;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    left: -18px;
+    bottom: 0px;
+    border: 1px solid red;
+}
+
+.LineBoders{
+    position: relative;
+    border: 1px solid aqua;
+    bottom: 2px;
+    height: 250px;
+}
+
+.LongLine{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(90, 87, 87);
+    height: 220px;
+    width: 5px;
+    left: 30px;
+    bottom: 0px;
+}
+
+.ShortRectangle{
+    z-index: 12;
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    height: 10px;
+    width: 25px;
+    left: 10px;
+    
+}
+
+#LTA{
+    bottom: 180px;
+}
+
+#LGASText{
+    left: 50px
+}
+/*Distace between lines equal to 67*/
+#LQuadText{
+    left: 117px;
+}
