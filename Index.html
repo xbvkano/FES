@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>FES simulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- divide the box above in 3 collums, the middle one being larger than the two on the sides -->
+    <div class="backgroundStyle" id="MainBackGround" >
+        <!-- create me two red rectangles-->
+        <div class="MainSettings">
+            <div class="backgroundStyle" id="GrayBox">
+            </div>
+            <!-- create me two yellow rectangles -->
+            <div class="backgroundStyle" id="YellowBox1">
+                <p id="Power">Power <br> <span id="WPower">(W)</span></p>
+                <p id="Power0">0.0</p>
+            </div>
+            <div class="backgroundStyle" id="YellowBox2">
+                <p id="Speed">Speed <br> <span id="RPMSpeed">(RPM)</span></p>
+                <p id="Speed0">0</p>
+            </div>
+            <div class="backgroundStyle" id="RedBox1">
+                <p id="ControlResistance">Resistance <br><span id="ControlNm">(Nm)</span></p>
+            </div>
+            <div class="backgroundStyle" id="RedBox2">
+                <p id="ControlSpeed">Control Speed <br><span id="ControlRMP">(RPM)</span></p>
+            </div>
+            <div class="backgroundStyle" id="WhiteBox1">
+                <p></p>
+            </div>
+            <div class="backgroundStyle" id="Patient">
+                <p id="PatientNotOpen">Patient not open</p>
+            </div>
+
+
+
+            <!-- button for configurations and their possible outcomes-->
+            <div class = "dropdown" id="IdRequirement"data-dropdown>
+                <button class="backgroundStyle" id="Config" data-dropdown-button><span class = "AjudstConfigureText">CONFIGURE</span><br>
+                    <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                </button>
+                <div class="dropdown-menu" id="PatientLoginPop">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                        <div class="IDCheck">
+                            <p class="AdjustingSizePasswordPop">Enter Patient ID:</p>
+                            <p id="littleDots" data-IdDisplay></p>
+                        </div>
+                        <div class="ContainerGrid">
+                            <div class="GridForNumbers">
+                                <!--Adjust so the code below has buttons-->
+                                <div id="Item1-List"><button data-number><p class="textGrid" id="SingleTextGrid">1</p></button></div>
+                                <div id="Item2-List"><button data-number><p class="textGrid">2<br>abc</p></button></div>
+                                <div id="Item3-List"><button data-number><p class="textGrid">3<br>def</p></button></div>
+                                <div id="Item4-List"><button data-number><p class="textGrid">4<br>ghi</p></button></div>
+                                <div id="Item5-List"><button data-number><p class="textGrid">5<br>jkl</p></button></div>
+                                <div id="Item6-List"><button data-number><p class="textGrid">6<br>mno</p></button></div>
+                                <div id="Item7-List"><button data-number><p class="textGrid">7<br>pqrs</p></button></div>
+                                <div id="Item8-List"><button data-number><p class="textGrid">8<br>tuv</p></button></div>
+                                <div id="Item9-List"><button data-number><p class="textGrid">9<br>wxyz</p></button></div>
+                                <div id="Item10-List"><button data-clear><p class="textGrid" id="SingleTextGrid">Clear</p></button></div>
+                                <div id="Item11-List"><button data-number><p class="textGrid" id="SingleTextGrid">0</p></button></div>
+                                <div id="Item12-List"><button data-SubmitID><p class="textGrid" id="SingleTextGrid">OK</p></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "dropdown hidden" id="IdRequirement"data-dropdown data-PatientLogedInOnly>
+                <button class="backgroundStyle" id="Config" data-dropdown-button><span class = "AjudstConfigureText">CONFIGURE</span><br>
+                    <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                </button>
+
+
+                <div class="dropdown-menu CleanBackground">
+                    <p class="Header">Therapy Settings - System Default</p>
+                    <span class="GrayBox"></span>
+                    <div class="WhiteMainBackground">
+                        <span class="StimulatorText">Stimulator</span>
+                        test
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class = "dropdown" id="PasswordRequirement" data-dropdown>
+                <div class="dropdown-menu" id="PatientLoginPop">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                        <div class="IDCheck">
+                            <p class="AdjustingSizePasswordPop">Enter patient PIN:</p>
+                            <p id="littleDots" data-PasswordDisplay></p>
+                        </div>
+                        <div class="ContainerGrid">
+                            <div class="GridForNumbers">
+                                <!--Adjust so the code below has buttons-->
+                                <div id="Item1-List"><button data-number><p class="textGrid" id="SingleTextGrid">1</p></button></div>
+                                <div id="Item2-List"><button data-number><p class="textGrid">2<br>abc</p></button></div>
+                                <div id="Item3-List"><button data-number><p class="textGrid">3<br>def</p></button></div>
+                                <div id="Item4-List"><button data-number><p class="textGrid">4<br>ghi</p></button></div>
+                                <div id="Item5-List"><button data-number><p class="textGrid">5<br>jkl</p></button></div>
+                                <div id="Item6-List"><button data-number><p class="textGrid">6<br>mno</p></button></div>
+                                <div id="Item7-List"><button data-number><p class="textGrid">7<br>pqrs</p></button></div>
+                                <div id="Item8-List"><button data-number><p class="textGrid">8<br>tuv</p></button></div>
+                                <div id="Item9-List"><button data-number><p class="textGrid">9<br>wxyz</p></button></div>
+                                <div id="Item10-List"><button data-clear><p class="textGrid" id="SingleTextGrid">Clear</p></button></div>
+                                <div id="Item11-List"><button data-number><p class="textGrid" id="SingleTextGrid">0</p></button></div>
+                                <div id="Item12-List"><button data-SubmitPassword><p class="textGrid" id="SingleTextGrid">OK</p></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "dropdown" id="ClinicianRequirement" data-dropdown>
+                <div class="dropdown-menu" id="PatientLoginPop">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                        <div class="IDCheck">
+                            <p class="AdjustingSizePasswordPop" id="ClinicianLoginText">Enter Clinician ID:</p>
+                            <p id="littleDots" data-PasswordDisplay data-ClinicianDisplay></p>
+                        </div>
+                        <div class="Unmask">
+                        <input type="checkbox" data-Unmask> Unmask
+                        </div>
+                        <div class="ContainerGrid">
+                            <div class="GridForNumbers">
+                                <!--Adjust so the code below has buttons-->
+                                <div id="Item1-List"><button data-number><p class="textGrid" id="SingleTextGrid">1</p></button></div>
+                                <div id="Item2-List"><button data-number><p class="textGrid">2<br>abc</p></button></div>
+                                <div id="Item3-List"><button data-number><p class="textGrid">3<br>def</p></button></div>
+                                <div id="Item4-List"><button data-number><p class="textGrid">4<br>ghi</p></button></div>
+                                <div id="Item5-List"><button data-number><p class="textGrid">5<br>jkl</p></button></div>
+                                <div id="Item6-List"><button data-number><p class="textGrid">6<br>mno</p></button></div>
+                                <div id="Item7-List"><button data-number><p class="textGrid">7<br>pqrs</p></button></div>
+                                <div id="Item8-List"><button data-number><p class="textGrid">8<br>tuv</p></button></div>
+                                <div id="Item9-List"><button data-number><p class="textGrid">9<br>wxyz</p></button></div>
+                                <div id="Item10-List"><button data-clear><p class="textGrid" id="SingleTextGrid">Clear</p></button></div>
+                                <div id="Item11-List"><button data-number><p class="textGrid" id="SingleTextGrid">0</p></button></div>
+                                <div id="Item12-List"><button data-SubmitClinician><p class="textGrid" id="SingleTextGrid">OK</p></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "dropdown" id="WrongID" data-dropdown>
+                <div class="dropdown-menu" id="WrongInput">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                            <!-- Make me a Exit button-->
+                            <button class="ExitButton" data-wrongIDExit>X</button>
+                            <p class="WrongInputText">The Patient ID is not valid.</p>
+                            <button class="RetryButton" data-wrongIDExit>Retry</button>
+                            <button class="CancelButoonWrongID" id="PositioningCancelButton" data-wrongIDExit>Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "dropdown" id="WrongPIN" data-dropdown>
+                <div class="dropdown-menu" id="WrongInput">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                            <!-- Make me a Exit button-->
+                            <button class="ExitButton" data-wrongIDExit>X</button>
+                            <p class="WrongInputText" id="PINWrongText">The PIN you have entered is <br>incorrect.</p>
+                            <button class="RetryButton" data-wrongIDExit>Retry</button>
+                            <button class="CancelButoonWrongID" id="PositioningCancelButton" data-wrongIDExit>Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "dropdown" id="WrongClinicianID" data-dropdown>
+                <div class="dropdown-menu" id="WrongInput">
+                    <span id="whiteBar"></span>
+                    <div class="PasswordLoginPop">
+                            <!-- Make me a Exit button-->
+                            <button class="ExitButton" data-wrongIDExit>X</button>
+                            <p class="WrongInputText" id="WrongInputText">The Clinician ID is not valid.</p>
+                            <button class="RetryButton" data-wrongIDExit>Retry</button>
+                            <button class="CancelButoonWrongID" id="PositioningCancelButton" data-wrongIDExit>Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="YellowCircle"><i class="fa-sharp fa-solid fa-circle fa-2x" id="innerCircle"></i></div>
+            <i class="fa-sharp fa-solid fa-circle fa-2x" id="innerCircle2"></i>
+            <i class="fa-solid fa-earth-americas fa-2x" id="miniEarth"></i>
+            <div id="Earth"></div>
+            <i class="fa-solid fa-x fa-2xs" id="X"></i>
+            <div class="backgroundStyle" id="Timer">
+                <p id="TimerText">0:00:00<i class="fa-solid fa-arrow-down-long fa-2xs"></i></p>
+            </div>
+            <button class="backgroundStyle" id="Go"><i class="fa-solid fa-circle fa-2x"  id="GreenCircle"></i>
+                <i class="fa-solid fa-caret-left fa-xl" id="GreenTriagle"></i><b id="GoText">GO</b></button>
+            <!-- Create me a rectangular shape with round edges, the background should be a fade from blue to white in a downwards angle, and add a 2px yellow bord-->
+            <div class="backgroundStyle" id="BlueBoxSimulator">
+                <p id="BlueBoxTextSimulator">Stimulation</p>
+                <p id="BlueBoxTextSimulator2">Off</p>
+            </div>
+            <span class="whiteDouble"><p class="WD0">0.00</p></span>
+            <span class="whiteDouble" id="SpeedSet"><p class="WD0" id="SD0">0</p></span>
+            </div>
+            <div id="PowerOff"><i class="fa-solid fa-power-off" id="PowerIcon"></i></div>
+            <div class="DGray" id="MachineName"><span id="SelfName"><b>RT300</b></span></div>
+            <div class="DGray" id="MachineID"><span id="SelfID"><b>5.05.4748</b></span></div>
+            <!-- Make me a rectangle that goes from one side to the other of the parent container-->
+            <div id="SettingsBar">
+                <span id="SettingsOptions">
+                    <div class = "dropdown" id="ClinicianTab"data-dropdown>
+                        <button class="link" data-dropdown-button>Clinician</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox" data-ClinicianLogin><span id="OptionTextSpacing">Clinician Log In...</span></button>
+                            <button class="option DisableButton"><span id="OptionTextSpacing">Log Out</span></button>
+                        </div>
+                    </div>
+                    <div class = "dropdown" id="PatientTab"data-dropdown>
+                        <button class="link" data-dropdown-button>Patient</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox" data-PatientLogin><span id="OptionTextSpacing">Open Patient...</span></button>
+                            <button class="option DisableButton"><span id="OptionTextSpacing">Close Patient</span></button>
+                            <button class="option"><span id="OptionTextSpacing">Recent Patients<span ><i class="fa-solid fa-2xs fa-caret-right" id="RecentPatientsArrow"></i></span></button>
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox" data-WithoutId><i class="fa-solid fa-check" id="CheckMarkForOption" data-WithoutIdCheck></i><span id="OptionTextSpacing">Use Sage Without Patient ID</span></button>
+                            <button class="option" id="hoverbox" data-WithId><i class="fa-solid fa-check" id="CheckMarkForOption" data-WithIdCheck></i><span id="OptionTextSpacing">Use With Patient ID</span></button>
+                        </div>
+                    </div>
+                    <div class = "dropdown" data-dropdown>
+                        <button class="link DisableButton" data-dropdown-button>Therapy</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox"><span id="OptionTextSpacing">Clinician Log In...</span></button>
+                            <button class="option DisableButton" ><span id="OptionTextSpacing">Log Out</span></button>
+                        </div>
+                    </div>
+                    <div class = "dropdown" data-dropdown>
+                        <button class="link" data-dropdown-button>System</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox"><span id="OptionTextSpacing">Stimulators...</span></button>
+                            <button class="option" id="hoverbox"><span id="OptionTextSpacing">System Settings...</span></button>
+                            <button class="option" id="hoverbox"><span id="OptionTextSpacing">Calibrate Ergometer...</span></button>
+                            <button class="option" id="hoverbox"><span id="OptionTextSpacing">Synchronize...</span></button>
+                        </div>
+                    </div>
+                    <div class = "dropdown" data-dropdown>
+                        <button class="link" data-dropdown-button>Internet</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox" onclick="location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0'"><span id="OptionTextSpacing" >www.rtilaink.com</span></button>
+                            <button class="option" id="hoverbox" onclick="location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0'"><span id="OptionTextSpacing" >www.restorative-therapies.com</span></button>
+                        </div>
+                    </div>
+                    <div class = "dropdown" data-dropdown>
+                        <button class="link" data-dropdown-button>Help</button>
+                        <div class="dropdown-menu">
+                            <hr class="LineForDropdown">
+                            <button class="option" id="hoverbox" onclick="location.href='https://www.youtube.com/watch?v=xvFZjo5PgG0'"><span id="OptionTextSpacing" >About...</span></button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class = "BasicBackground" data-BasicBackgroundQR>
+                <img src="./QRCode.png" alt="QR Code for background" class="QRCodeBackground">
+            </div>
+
+
+            <div class = "MuscleSettings" data-MuscleSettings>
+                <img src="https://media.istockphoto.com/id/459951679/photo/male-anatomy-view.jpg?s=612x612&w=0&k=20&c=-T2Zk12yDJgrF3T2XPz80ThaC_vZKh-s7qCYQwXNAXA=" alt="Human muscle anatomy" class="ImageOfTheBody">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
