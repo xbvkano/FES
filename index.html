@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <div class = "dropdown hidden" id="IdRequirement"data-dropdown data-PatientLogedInOnly>
+            <div class = "dropdown hidden" id="IdRequirement" data-dropdown data-PatientLogedInOnly data-ConfigureDropDown>
                 <button class="backgroundStyle" id="Config" data-dropdown-button><span class = "AjudstConfigureText">CONFIGURE</span><br>
                     <div class="ConfigureIconNoClinician" data-ConfigNoClinician>
                         <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
@@ -86,7 +86,7 @@
                 </button>
 
 
-                <div class="dropdown-menu CleanBackground">
+                <div class="dropdown-menu CleanBackground" >
                     <p class="Header">Therapy Settings - System Default</p>
                     <span class="GrayBox"></span>
                     <div class="WhiteMainBackground">
@@ -113,6 +113,12 @@
                                 <option>150</option>
                             </select>
                         </div>
+
+                        <!-- Create a button tag with a <i> tag inside -->
+                        <button class="SampleButton" data-closeButtonDropDown><i class="fa-solid fa-3x fa-check" style="color: #00ff33; pointer-events: none;"></i></button>
+                        <button class="SampleButton X" data-closeButtonDropDown><i class="fa-solid fa-3x fa-x" style="color: #ff0000; pointer-events: none;"></i></button>
+
+
                     </div>
                 </div>
 

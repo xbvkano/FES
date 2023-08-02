@@ -124,6 +124,7 @@ body{
 .AjudstConfigureText{
     position: absolute;
     right: 80px;
+    pointer-events: none;
 }
 
 
@@ -911,4 +912,19 @@ body{
 
 .ConfigureIconNoClinician{
     pointer-events: none;
+}
+
+.SampleButton{
+    position: absolute;
+    background-color: white;
+    width: 80px;
+    height: 50px;
+    border: 3px outset black;
+
+    left: 40px;
+    bottom: 80px;
+}
+
+.SampleButton.X{
+    left: 280px;
 }

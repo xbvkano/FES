@@ -135,7 +135,7 @@ class Login{
 
 
 // Creationg of variables
-const ID = new Login('1974', '1234');
+const ID = new Login('9', '9');
 const NumberButtons = document.querySelectorAll('[data-number]');
 
 const SubmitIDForVerify = document.querySelector('[data-SubmitID]');
@@ -154,7 +154,7 @@ const WithoutIdToggle = document.querySelector('[data-WithoutId]');
 document.querySelector("[data-WithIdCheck]").classList.add('active');
 let IDRequireSage = true;
 
-
+const CloseButtonDropdown = document.querySelectorAll('[data-closeButtonDropDown]');
 
 // Non Document Functions
 
@@ -247,7 +247,13 @@ WithoutIdToggle.addEventListener('click', () => {
 });
 
 
-
+CloseButtonDropdown.forEach(button => { 
+    button.addEventListener('click', () => {
+        let currentDropdown;
+        currentDropdown = document.querySelector('[data-ConfigureDropDown]');
+        currentDropdown.classList.remove('active');
+    });
+});
 
 NumberButtons.forEach(button => {
     button.addEventListener('click', () => {
