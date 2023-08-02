@@ -88,7 +88,7 @@ body{
     left: 320px;
 }
 
-#Patient{
+.backgroundStyle.Patient{
     background-color: blue;
     width: 220px;
     height: 30px;
@@ -98,6 +98,11 @@ body{
     bottom: 28px;
     left: 28px;
     border-radius: 5px;
+}
+
+.backgroundStyle.Patient.hidden{
+    opacity: 0;
+    pointer-events: none;
 }
 
 #Config{
@@ -200,7 +205,7 @@ body{
     bottom: 60px;
 }
 
-#PatientNotOpen{
+.PatientNotOpen{
     color: white;
     font-size: 20px;
     position: relative;
@@ -208,6 +213,7 @@ body{
     bottom: 15px;
     left: 40px
 }
+
 
 #Timer{
     background-color: blue;
@@ -828,4 +834,44 @@ body{
     width: 80px;
     height: 20px;
     text-align: center;
+    font-size: 15px;
+}
+
+.WhiteMainBackground .DropDownOptionsTop{
+    display: flex;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 355px;
+    
+}
+
+.WhiteMainBackground .DropDownOptions{
+    display: flex;
+    margin-left: 25px;
+    font-size: 18px;
+    width: 355px;
+  
+}
+
+.DropDownSelection{
+    position: relative;
+    height: 20px;
+    width: 200px;
+    margin-top: 18px;
+    margin-left: 85px;
+ 
+
+
+}
+
+.MinToMaxCheck{
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    
+}
+
+.GlobalFrequency{
+    width: 200px;
 }

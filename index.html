@@ -34,8 +34,8 @@
             <div class="backgroundStyle" id="WhiteBox1">
                 <p></p>
             </div>
-            <div class="backgroundStyle" id="Patient">
-                <p id="PatientNotOpen">Patient not open</p>
+            <div class="backgroundStyle Patient">
+                <p class="PatientNotOpen">Patient not open</p>
             </div>
 
 
@@ -84,7 +84,28 @@
                     <span class="GrayBox"></span>
                     <div class="WhiteMainBackground">
                         <span class="StimulatorText">Stimulator</span>
-                        test
+                        <div class="DropDownOptionsTop">
+                            <p>Stimulation</p>
+                            <select class="DropDownSelection">
+                                <option>Unilateral</option>
+                                <option>Bilateral</option>
+                            </select>
+                        </div>
+                        <div class="DropDownOptions">
+                            <p>Set MIN to MAX</p>
+                            <input type="checkbox" class="MinToMaxCheck">
+                        </div>
+                        <div class="DropDownOptions">
+                            <p class="GlobalFrequency">Global Frequency</p>
+                            <select class="DropDownSelection">
+                                <option>40</option>
+                                <option>60</option>
+                                <option>80</option>
+                                <option>100</option>
+                                <option>120</option>
+                                <option>150</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 

@@ -162,7 +162,7 @@ const PatientIsLogedIn = Patient => {
         document.querySelector("[data-BasicBackgroundQR]").classList.add('active');
         document.querySelector("[data-MuscleSettings]").classList.add('active');
         document.querySelector("[data-PatientLogedInOnly]").classList.remove('hidden');
-        
+        document.querySelector(".backgroundStyle.Patient").classList.add("hidden");
     }
     
 
