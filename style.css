@@ -1,0 +1,762 @@
+body{
+    background-color: gray;
+}
+
+#MainBackGround{
+    background-color: white;
+    width: 1280px;
+    height: 720px;
+    z-index: 0;
+    position: absolute;
+    display: flex;
+
+}
+
+.MainSettings{
+    position: relative;
+    display: flex;
+}
+
+
+#GrayBox{
+    background-color: #9ebcdd;
+    width: 1274px;
+    height: 360px;
+    z-index: 1;
+    margin: 3px;
+    align-self: flex-end;
+    position: absolute;
+}
+
+#YellowBox1{
+    background-color: rgb(237, 237, 144);
+    width: 320px;
+    height: 90px;
+    z-index: 2;
+    margin: 3px;
+    align-self: flex-end;
+    position: absolute;
+    top: 261px;
+}
+
+#YellowBox2{
+    background-color: rgb(237, 237, 144);
+    width: 320px;
+    height: 90px;
+    z-index: 2;
+    margin: 3px;
+    align-self: flex;
+    position: absolute;
+    top: 261px;
+    left: 954px;
+}
+
+#RedBox1{
+    color: white;
+    background-color: rgb(255, 0, 0);
+    width: 320px;
+    height: 220px;
+    z-index: 2;
+    margin: 3px;
+    align-self: flex-end;
+    position: absolute;
+    top: 38px;
+}
+
+#RedBox2{
+    color: white;
+    background-color: rgb(255, 0, 0);
+    width: 320px;
+    height: 220px;
+    z-index: 2;
+    margin: 3px;
+    align-self: flex-end;
+    position: absolute;
+    top: 38px;
+    left: 954px;
+}
+
+#WhiteBox1{
+    background-color: white;
+    width: 634px;
+    height: 590px;
+    z-index: 2;
+    margin: 3px;
+    align-self: flex-end;
+    position: absolute;
+    top: 38px;
+    left: 320px;
+}
+
+#Patient{
+    background-color: blue;
+    width: 220px;
+    height: 30px;
+    z-index: 2;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    border-radius: 5px;
+}
+
+#Config{
+    /*make this butto have a white background, a radius border of 5 px and color the border in gray */
+    background-color: white;
+    width: 220px;
+    height: 80px;
+    z-index: 2;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 130px;
+    left: 28px;
+    border: 3px ridge rgb(55, 51, 51);
+    outline: 2px solid rgb(197, 189, 189);
+    color: rgb(45, 48, 106); 
+    border-radius: 10px;
+}
+
+.AjudstConfigureText{
+    position: absolute;
+    right: 80px;
+}
+
+
+#settingsIcon{
+    font-size: large;
+}
+
+#outterCircle{
+    color:rgb(237, 237, 144);
+    position: relative;
+    align-self: flex-end;
+    z-index: 3;
+    bottom: 18px;
+    left: 400px;
+}
+
+/* make me a circle with a transparent background, 5px yellow border*/
+
+#YellowCircle{
+    background-color: transparent;
+    border: 3px double rgb(255, 230, 0);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 4;
+    left: 400px;
+    bottom: 21px;
+    display: flex;
+}
+
+ /* position the gray circle below in the middle of the yellow circle*/
+#innerCircle{
+    color: #8f949c;
+    position: absolute;
+    z-index: 5;
+    left: 4px;
+    top: 4px;
+}
+
+#innerCircle2{
+    color: #b3b9c4;
+    position: absolute;
+    z-index: 5;
+    left: 463px;
+    bottom: 28px;
+    z-index: 3;
+}
+
+#Earth{
+    /*make this butto have a white background, a radius border of 5 px and color the border in gray */
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    z-index: 2;
+    align-self: flex-end;
+    position: absolute;
+    left: 455px;
+    bottom: 21px;
+    border: 1px ridge rgb(55, 51, 51);
+    outline: 1px solid rgb(197, 189, 189);
+    color: rgb(45, 48, 106); 
+    border-radius: 5px;
+}
+
+
+#miniEarth{
+    position: absolute;
+    left: 463px;
+    bottom: 28px;
+    z-index: 3;
+}
+
+#X{
+    color: #ff0000;
+    position: absolute;
+    z-index: 5;
+    left: 492px;
+    bottom: 60px;
+}
+
+#PatientNotOpen{
+    color: white;
+    font-size: 20px;
+    position: relative;
+    z-index: 5;
+    bottom: 15px;
+    left: 40px
+}
+
+#Timer{
+    background-color: blue;
+    width: 160px;
+    height: 40px;
+    z-index: 2;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 28px;
+    left: 797px;
+    border-radius: 5px;
+}
+
+#TimerText{
+    font-size: 40px;
+    color: white;
+    position: relative;
+    bottom: 42px;
+    left: 13px;
+}
+
+#Go{
+    background-color: white;
+    width: 220px;
+    height: 80px;
+    z-index: 2;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 20px;
+    left: 1005px;
+    border: 4px ridge green;
+    outline: 2px solid rgb(197, 189, 189);
+    color: rgb(45, 48, 106); 
+    border-radius: 10px;
+    font-size: 30px;
+    color: green;
+}
+
+#GreenCircle{
+    color: green;
+    border: 3px ridge green;
+    border-radius: 70%;
+    position: relative;
+    right: 10px;
+}
+
+#GoText{
+    position: relative;
+    bottom: 6px;
+    left: 5px;
+    font-size: 45px;
+}
+
+#GreenTriagle{
+    position: relative;
+    bottom: 10px;
+    right: 5px;
+}
+
+#BlueBoxSimulator{
+    /* make the background a fade from blue to white in a 270 degree angle*/
+    background: linear-gradient(180deg, #2d569e, 60%, #ffffff);
+    z-index: 5;
+    height: 100px;
+    width: 250px;
+    border-radius: 20px;
+    border: 3px solid rgb(237, 237, 144);
+
+    position: relative;
+    left: 990px;
+    top: 375px;
+}
+
+#BlueBoxTextSimulator{
+    color: black;
+    position: relative;
+    left: 73px;
+    bottom: 20px;
+    font-size: 23px;
+
+}
+
+#BlueBoxTextSimulator2{
+    color: black;
+    position: relative;
+    left: 205px;
+    bottom: 3px;
+    font-size: 23px;
+
+}
+
+
+
+#Power{
+    font-size: 40px;
+    position: relative;
+    left: 30px;
+    bottom: 25px;
+}
+
+#WPower{
+    font-size: 18px;
+
+
+    position: relative;
+    bottom: 25px;
+    left: 41px;
+}
+
+#Power0{
+    font-size: 65px;
+    position: relative;
+    left: 180px;
+    bottom: 187px;
+
+}
+
+#Speed{
+    font-size: 40px;
+    position: relative;
+    left: 195px;
+    bottom: 25px;
+}
+
+#RPMSpeed{
+    font-size: 18px;
+
+
+    position: relative;
+    bottom: 20px;
+    left: 22px;
+}
+
+#Speed0{
+    font-size: 65px;
+    position: relative;
+    left: 80px;
+    bottom: 187px;
+
+}
+
+.whiteDouble{
+    z-index: 2;
+    background-color: white;
+    border: 7px double red;
+    width: 170px;
+    height: 65px;
+    position: relative;
+    right: 125px;
+    top: 165px;
+}
+
+#SpeedSet{
+    left: 525px;
+}
+
+.WD0{
+    font-size: 65px;
+    position: relative;
+    left: 30px;
+    bottom: 67px;
+}
+
+#SD0{
+    left: 65px;
+}
+
+#ControlSpeed{
+    font-size: 30px;
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+
+#ControlRMP{
+    font-size: 18px;
+    position: relative;
+    left: 65px;
+    bottom: 8px;
+}
+
+#ControlResistance{
+    font-size: 38px;
+    position: relative;
+    left: 139px;
+    bottom: 10px;
+}
+
+#ControlNm{
+    font-size: 18px;
+    position: relative;
+    left: 65px;
+    bottom: 20px;
+}
+
+#PowerOff{
+    position: absolute;
+    align-self: flex-start;
+    z-index: 2;
+    right: 4px;
+    margin-top: 19px;
+    height: 17px;
+    width: 17px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(148, 145, 145);
+}
+
+.DGray{
+    border: 2px outset rgb(242, 242, 242);
+    height: 15px;
+    width: 50px;
+    text-align: center;
+    background-color: rgb(242, 242, 242);
+    font-size: 14px;
+
+    position: relative;
+    margin-top: 19px;
+    margin-right: 3px;
+    left: 276px;
+}
+
+#MachineID{
+    right: 269px;
+    width: 65px;
+    
+}
+
+#SelfID{
+    color: black;
+    bottom: 0.5x;
+    position: relative;
+}
+
+/*Fix below so it becomes a banner*/
+#SettingsBar{
+    background-color: white;
+    color: rgb(79, 79, 79);
+    width: 1276px;
+    height: 16px;
+    z-index: 2;
+    position: absolute;
+    border: 2px solid rgb(216, 216, 216);
+    top: 0px;
+    left: 0px;
+    display: flex;
+}
+
+#SettingsOptions{
+    display: flex;
+    
+}
+
+
+.link{
+    /*center self vertically inside its container*/
+    position: relative;
+    text-align: center;
+    background-color: white;
+    height: 16px;
+    border: 1px solid transparent;
+    border-radius: 0%;
+    font-size: 12px;
+    bottom: 1.7px;
+}
+
+
+#SettingsOptions .link:hover{
+    background-color: rgb(176, 211, 238);
+    border: 1px solid rgb(83, 141, 208);
+}
+#hoverbox:hover{
+    background-color: rgb(176, 211, 238);
+    border: 1px solid rgb(83, 141, 208);
+}
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    display: grid;
+    position: absolute;
+    width: 270px;
+    height: auto;
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgb(151, 149, 149);
+    top: 16px;
+    z-index: 10;
+
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.dropdown.active > .dropdown-menu{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px);
+    z-index: 10;
+}
+
+.dropdown-menu .LineForDropdown{
+    position: relative;
+    bottom: 3px;
+    width: 97%;
+    height: 1px;
+    text-align: center;
+}
+
+
+.dropdown-menu .option{
+    color: black;
+    position: relative;
+    text-align: left;
+    margin-top: 5px;
+    bottom: 6px;
+    z-index: inherit;
+    border: 1px solid transparent;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+#OptionTextSpacing{
+    position: relative;
+    left: 30px;
+}
+
+.option #LogOut{
+    position: relative;
+    right: 40px;
+    opacity: 0.25;
+    top: 5px;
+}
+
+#RecentPatientsArrow{
+    display: inline-block;
+    position: relative;
+    left: 98px;
+}
+
+#CheckMarkForOption{
+    position: absolute;
+    opacity: 0;
+}
+
+#CheckMarkForOption.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* This portion of the file is about the patient login */
+#whiteBar{
+    background-color: white;
+    width: 100%;
+    height: 33px;
+}
+
+#PatientLoginPop{
+    margin-left: 10px;
+    width: 300px;
+}
+
+.PasswordLoginPop{
+    position: relative;
+}
+.AdjustingSizePasswordPop{
+    position: relative;
+    display: flex;
+    left: 30px;
+    z-index: 10;
+}
+
+.IDCheck{
+    display: flex;
+}
+
+#littleDots{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border: 1px double rgb(133, 128, 128);
+    font-size: 20px;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+
+    
+    left: 150px;
+    top: -10px;
+
+
+    overflow-x: hidden;
+}
+
+.GridForNumbers{
+    position: absolute;
+    background-color: inherit;
+    display: grid;
+    text-align: center;
+    grid-template-rows: repeat(4,60px);
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    height: 330px;
+    width: 270px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.GridForNumbers div{
+    border: 1px solid black;
+    background-color: rgba(197, 190, 190, 0.50);
+}
+
+.GridForNumbers div:hover{
+    border: 1px solid rgb(83, 141, 208);
+}
+
+.GridForNumbers button{
+    position: relative;
+    background-color: inherit;
+    border: transparent;
+    height: 100%;
+    width: 100%;
+}
+.ContainerGrid{
+    position: relative;
+    background-color: inherit;
+    height: auto;
+    width: 300px;
+    height: 320px;
+}
+
+.textGrid{
+    margin-top: 10px;
+}
+
+#SingleTextGrid{
+    margin-top: 13px;
+}
+
+#ClinicianLoginText{
+    left: 25px;
+}
+
+.Unmask{
+    position: relative;
+    left: 146px;
+}
+
+.option.DisableButton{
+    color: rgba(45, 48, 106,0.50);
+    pointer-events: none;
+}
+
+#WrongInput{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: 269px;
+    height: 300px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+
+
+.WrongInputText{
+    position: absolute;
+    bottom: 220px;
+    left: 22px;
+    
+}
+
+.ExitButton{
+    position: absolute;
+    background-color: #e53d3d;
+    border-bottom-left-radius: 20%;
+    width: 50px;
+    height: 20px;
+    bottom: 280px;
+    left: 220px;
+    color: white;
+}
+
+.RetryButton, .CancelButoonWrongID{
+    width: 33%;
+    margin: 15px;   
+}
+
+.RetryButton:hover, .CancelButoonWrongID:hover{
+    background-color: rgb(176, 211, 238);
+    border: 1px solid rgb(83, 141, 208);
+}
+
+#PositioningCancelButton{
+    margin-left: 42px;
+    margin-right: 5px;
+    margin-top: 230px;
+}
+
+#PINWrongText{
+    bottom: 210px;
+}
+
+#PointerNone{
+    pointer-events: none;
+}
+
+
+.ImageOfTheBody{
+    position: absolute;
+    z-index: 9;
+    top: 41px;
+    left: 325px;
+    width: 630px;
+    height: 590px;
+}
+
+.MuscleSettings{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.MuscleSettings.active{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: auto;
+}
+
+.QRCodeBackground{
+    position: absolute;
+    z-index: 9;
+    top: 130px;
+    left: 440px;
+    width: 400px;
+    height: 400px;
+}
+
+.BasicBackground{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.BasicBackground.active{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
