@@ -161,6 +161,7 @@ const PatientIsLogedIn = Patient => {
     if (Patient === true){
         document.querySelector("[data-BasicBackgroundQR]").classList.add('active');
         document.querySelector("[data-MuscleSettings]").classList.add('active');
+        document.querySelector("[data-PatientLogedInOnly]").classList.remove('hidden');
         
     }
     
@@ -170,13 +171,11 @@ const PatientIsLogedIn = Patient => {
 const PatientLogOut = Patient => {
     if (Patient === true){
         document.querySelector("[data-BasicBackgroundQR]").classList.remove('active');
-        document.querySelector("[data-MuscleSettings]").classList.remove('active');    
+        document.querySelector("[data-MuscleSettings]").classList.remove('active');   
+        
     }
     
 }
-
-
-
 
 
 
