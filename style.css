@@ -873,5 +873,42 @@ body{
 }
 
 .GlobalFrequency{
+    opacity: 1;
+    pointer-events: auto;
     width: 200px;
+}
+
+.DropDownOptions.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ConfigureIconWithClinician{
+    position: absolute;
+    display: flex;
+
+    height: 53.5px;
+    width: 140px;
+
+    bottom: 1.5px;
+    
+    margin-left: 33px;
+}
+
+.ConfigureIconNoClinician.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ConfigureIconWithClinician.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ConfigureIconWithClinician {
+    pointer-events: none;
+}
+
+.ConfigureIconNoClinician{
+    pointer-events: none;
 }

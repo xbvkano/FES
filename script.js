@@ -74,11 +74,12 @@ class Login{
         this.clinicianLoggedIn = true;
     }
 
-    ClinicianLogIn(){
+    ClinicianLogOut(){
         this.clinicianLoggedIn = false;
     }
 
     IsClinicianLogIn(){
+        console.log(`Clinician ${this.clinicianLoggedIn}`);
         return this.clinicianLoggedIn;
     }
 
@@ -164,8 +165,6 @@ const PatientIsLogedIn = Patient => {
         document.querySelector("[data-PatientLogedInOnly]").classList.remove('hidden');
         document.querySelector(".backgroundStyle.Patient").classList.add("hidden");
     }
-    
-
 }
 
 const PatientLogOut = Patient => {
@@ -177,6 +176,16 @@ const PatientLogOut = Patient => {
     
 }
 
+
+// clinian part
+
+const ClinicianIsLogedIn = Clinician => {
+    if (Clinician === true){
+        document.querySelector("[data-clinicianOptionDropdown").classList.remove("hidden");
+        document.querySelector("[data-ConfigNoClinician]").classList.add("hidden");
+        document.querySelector("[data-ConfigWithClinician]").classList.remove("hidden");
+    }
+}
 
 
 
@@ -312,7 +321,8 @@ SubmitClinicianForVerify.addEventListener('click', (e) => {
         let currentDropdown;
         currentDropdown = e.target.closest('[data-dropdown]');
         currentDropdown.classList.remove('active');
-        ID.ClinicianLogInOut();
+        ID.ClinicianLogIn();
+        ClinicianIsLogedIn(ID.IsClinicianLogIn());
     }
     else{
         document.getElementById("WrongClinicianID").classList.add('active');

@@ -75,7 +75,14 @@
 
             <div class = "dropdown hidden" id="IdRequirement"data-dropdown data-PatientLogedInOnly>
                 <button class="backgroundStyle" id="Config" data-dropdown-button><span class = "AjudstConfigureText">CONFIGURE</span><br>
-                    <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                    <div class="ConfigureIconNoClinician" data-ConfigNoClinician>
+                        <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                    </div>
+                    <div class="ConfigureIconWithClinician hidden" data-ConfigWithClinician>
+                        <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                        <i class="fa-solid fa-sliders fa-rotate-90 fa-4x" id="PointerNone"></i>
+                    </div>
+                    
                 </button>
 
 
@@ -95,8 +102,8 @@
                             <p>Set MIN to MAX</p>
                             <input type="checkbox" class="MinToMaxCheck">
                         </div>
-                        <div class="DropDownOptions">
-                            <p class="GlobalFrequency">Global Frequency</p>
+                        <div class="DropDownOptions hidden" data-clinicianOptionDropdown>
+                            <p class="GlobalFrequency ">Global Frequency</p>
                             <select class="DropDownSelection">
                                 <option>40</option>
                                 <option>60</option>
