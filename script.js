@@ -63,12 +63,19 @@ class Login{
         this.ClinicianLogin = "";
     }
     
-    PatientLogInOut(){
-        this.LoggedIn ? this.LoggedIn = false : this.LoggedIn = true;
+    PatientLogIn(){
+        this.LoggedIn = true;
+    }
+    PatientLogOut(){
+        this.LoggedIn = false;
     }
 
-    ClinicianLogInOut(){
-        this.clinicianLoggedIn ? this.clinicianLoggedIn = false : this.clinicianLoggedIn = true;
+    ClinicianLogIn(){
+        this.clinicianLoggedIn = true;
+    }
+
+    ClinicianLogIn(){
+        this.clinicianLoggedIn = false;
     }
 
     IsClinicianLogIn(){
@@ -287,7 +294,8 @@ SubmitPasswordForVerify.addEventListener('click', (e) => {
         currentDropdown = e.target.closest('[data-dropdown]');
         currentDropdown.classList.remove('active');
         // TODO: Add here the function for runing it based on a client
-        PatientIsLogedIn(ID.PatientLogInOut());
+        ID.PatientLogIn();
+        PatientIsLogedIn(ID.IsPatientLogIn());
         console.log("TEST")
         console.log(ID.IsPatientLogIn());
     }
