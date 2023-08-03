@@ -922,7 +922,7 @@ body{
     border: 3px outset black;
 
     left: 40px;
-    bottom: 80px;
+    bottom: 50px;
 }
 
 .SampleButton.X{
@@ -938,6 +938,7 @@ body{
 
     grid-template-rows: 270px;
     grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0px 3px;
 
     bottom: 127px;
     left: 450px;
@@ -1078,4 +1079,74 @@ body{
 
 #RERECT{
     bottom: 183px;
+}
+
+.TEST{
+    border: 1px solid red;
+
+}
+
+.AMPSelect{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    
+
+    left: 450px;
+    top: -10px;
+}
+
+.AmplatudeSelect{
+    position: relative;
+    top: -15px;
+    width: 200px;
+    height: 30px;
+}
+
+.GridForNumbersUnderMuscles{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px 25px;
+    
+
+    left: 460px;
+    bottom: 87px;
+
+    width: 778px;
+    height: 80px;
+}
+
+.TestGrid{
+    color: blue;
+    font-size: 16px;
+    text-align: center;
+
+    background-color: white;
+    border: 1px outset black;
+
+    box-shadow: -3px 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.BlueText{
+    text-align: center;
+    color: blue;
+    font-size: 14px;
+}
+
+.TopTextForNumbers1{
+    font-size: 13px;
+    position: absolute;
+    bottom: 60px;
+    left: 450px;
+    pointer-events: none;
+}
+
+.TopTextForNumbers2{
+    font-size: 13px;
+    position: absolute;
+    bottom: 25px;
+    left: 450px;
+    pointer-events: none;
 }
