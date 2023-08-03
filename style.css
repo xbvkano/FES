@@ -1150,3 +1150,22 @@ body{
     left: 450px;
     pointer-events: none;
 }
+
+.AllCheckbox{
+    position: relative;
+    left: -25px;
+}
+
+.AllCheckbox.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.RadioChoice{
+    opacity: 1;
+}
+
+.RadioChoice.hidden{
+    opacity: 0;
+    pointer-events: none;
+}

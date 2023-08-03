@@ -156,6 +156,11 @@ let IDRequireSage = true;
 
 const CloseButtonDropdown = document.querySelectorAll('[data-closeButtonDropDown]');
 
+// variables for the muscle selectinf process
+const MuscleSelect = document.querySelector('[data-MuscleSelect]');
+const radioButtons = document.getElementsByName("ChoiceOfMuscle");
+const MuscleAllCheckbox = document.querySelectorAll(".AllCheckbox");
+const MuscleRadio = document.querySelectorAll(".RadioChoice");
 // Non Document Functions
 
 const PatientIsLogedIn = Patient => {
@@ -362,4 +367,27 @@ ExitButtonsWrongID.forEach(button => {
         ID.clear();
         ID.updateDisplay("all");
     });
+});
+
+
+
+MuscleSelect.addEventListener('change', () => {
+    console.log(`Worked and value is ${MuscleSelect.value}`);
+    if (MuscleSelect.value == "All"){
+        // Loop through each radio button and set its checked property to true
+        MuscleRadio.forEach((radio) => {
+            radio.classList.add("hidden");
+        });
+        MuscleAllCheckbox.forEach(CheckBox => {
+            CheckBox.classList.remove("hidden");
+        });
+    }
+    else {
+        MuscleRadio.forEach((radio) => {
+            radio.classList.remove("hidden");
+        });
+        MuscleAllCheckbox.forEach(CheckBox => {
+            CheckBox.classList.add("hidden");
+        });
+    }
 });
