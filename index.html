@@ -95,7 +95,7 @@
                             <p>Stimulation</p>
                             <select class="DropDownSelection">
                                 <option>Unilateral</option>
-                                <option>Bilateral</option>
+                                <option disabled>Bilateral</option>
                             </select>
                         </div>
                         <div class="DropDownOptions">
@@ -105,12 +105,12 @@
                         <div class="DropDownOptions hidden" data-clinicianOptionDropdown>
                             <p class="GlobalFrequency ">Global Frequency</p>
                             <select class="DropDownSelection">
-                                <option>40</option>
-                                <option>60</option>
-                                <option>80</option>
-                                <option>100</option>
-                                <option>120</option>
-                                <option>150</option>
+                                <option>40.0Hz</option>
+                                <option>60.0Hz</option>
+                                <option>80.0Hz</option>
+                                <option>100.0Hz</option>
+                                <option>120.0Hz</option>
+                                <option>150.0Hz</option>
                             </select>
                         </div>
 
@@ -141,18 +141,84 @@
                                 <p class="TextForSlider" id="LQuadText">Left Quadriceps</p>
                                 <div class="LineBoders">
                                     <span class="LongLine"></span>
-                                    <span class="ShortRectangle" id="LGAS"></span>
+                                    <span class="ShortRectangle" id="LQUAD"></span>
                                 </div>
                             </div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
-                            <div class="TemplateForSliderSetting"></div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="HAM">
+                                <p class="TextForSlider" id="LHAMText">Left Hamstring</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="LHAM"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="GLUT">
+                                <p class="TextForSlider" id="LGLUTText">Left Gluteals</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="LGLUT"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="ERECT">
+                                <p class="TextForSlider" id="LERECTText">Left Erectors Spinae</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="LERECT"></span>
+                                </div>
+                            </div>
+
+                            <!-- Division between left and right-->
+
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="TA">
+                                <p class="TextForSlider" id="RTAText">Right Tibialis Anterior</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RTA"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="GAS">
+                                <p class="TextForSlider" id="RGASText">Right Gastrocnemius</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RGAS"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="QUAD">
+                                <p class="TextForSlider" id="RQUADText">Right Quadriceps</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RQUAD"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="HAM">
+                                <p class="TextForSlider" id="RHAMText">Right Hamstring</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RHAM"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="GLUT">
+                                <p class="TextForSlider" id="RGLUTText">Right Gluteals</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RGLUT"></span>
+                                </div>
+                            </div>
+                            <div class="TemplateForSliderSetting">
+                                <input type="radio" name="ChoiceOfMuscle" value="ERECT">
+                                <p class="TextForSlider" id="RERECTText">Right Erectors Spinae</p>
+                                <div class="LineBoders">
+                                    <span class="LongLine"></span>
+                                    <span class="ShortRectangle" id="RERECT"></span>
+                                </div>
+                            </div>
                         </div>
 
 

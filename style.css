@@ -956,12 +956,10 @@ body{
     transform: rotate(180deg);
     left: -18px;
     bottom: 0px;
-    border: 1px solid red;
 }
 
 .LineBoders{
     position: relative;
-    border: 1px solid aqua;
     bottom: 2px;
     height: 250px;
 }
@@ -992,10 +990,92 @@ body{
     bottom: 180px;
 }
 
+
+
 #LGASText{
     left: 50px
+}
+
+#LGAS{
+    bottom: 80px;
 }
 /*Distace between lines equal to 67*/
 #LQuadText{
     left: 117px;
+}
+
+#LQUAD{
+    bottom: 113px;
+}
+
+#LHAMText{
+    left: 184px;
+}
+
+#LHAM{
+    bottom: 146px;
+}
+
+#LGLUTText{
+    left: 251px;
+}
+
+#LGLUT{
+    bottom: 70px;
+}
+
+#LERECTText{
+    left: 318px;
+}
+
+#LERECT{
+    bottom: 103px;
+}
+
+#RTAText{
+    left: 385px;
+}
+
+#RTA{
+    bottom: 136px;
+}
+
+#RGASText{
+    left: 452px;
+}
+
+#RGAS{
+    bottom: 140px;
+}
+
+#RQUADText{
+    left: 519px;
+}
+
+#RQUAD{
+    bottom: 173px;
+}
+
+#RHAMText{
+    left: 586px;
+}
+
+#RHAM{
+    bottom: 206px;
+}
+
+#RGLUTText{
+    left: 653px;
+}
+
+#RGLUT{
+    bottom: 150px;
+}
+
+#RERECTText{
+    left: 720px;
+}
+
+#RERECT{
+    bottom: 183px;
 }
