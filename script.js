@@ -477,11 +477,11 @@ GoButton.addEventListener('click', () => {
 
 
         case "GAS":
-            videoCanvas.src = `./Body With Pads/GAS.png`;
+            videoCanvas.src = `./Vid/Gas.mp4`;
             break;
 
         case "QUAD":
-            videoCanvas.src = `./Body With Pads/Quads.png`;
+            videoCanvas.src = `./Vid/Quad.mp4`;
             break;
 
         case "HAM":
