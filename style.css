@@ -259,6 +259,7 @@ body{
     border-radius: 70%;
     position: relative;
     right: 10px;
+    pointer-events: none;
 }
 
 #GoText{
@@ -266,12 +267,14 @@ body{
     bottom: 6px;
     left: 5px;
     font-size: 45px;
+    pointer-events: none;
 }
 
 #GreenTriagle{
     position: relative;
     bottom: 10px;
     right: 5px;
+    pointer-events: none;
 }
 
 #BlueBoxSimulator{
@@ -1166,6 +1169,30 @@ body{
 }
 
 .RadioChoice.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.backgroundStyle .VideoForAnimation{
+    position: absolute;
+
+
+    z-index: 9;
+    top: 0px;
+    left: 322px;
+
+
+    width: 634px;
+    height: 700px;
+}
+
+.backgroundStyle .VideoForAnimation.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.MuscleSettings.hidden{
     opacity: 0;
     pointer-events: none;
 }

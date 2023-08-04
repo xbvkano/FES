@@ -163,8 +163,14 @@ const MuscleAllCheckbox = document.querySelectorAll(".AllCheckbox");
 const MuscleRadio = document.querySelectorAll(".RadioChoice");
 // Non Document Functions
 
+// Background Image
 const backgroundImage = document.getElementById("BackgrounBodyImage");
 const ApplyButton = document.querySelector("[data-apply]");
+let muscleChoice;
+// Background Animation Video
+const GoButton = document.getElementById("Go");
+const videoCanvas = document.querySelector("[data-videoAnimation]");
+
 
 
 
@@ -400,7 +406,11 @@ MuscleSelect.addEventListener('change', () => {
 });
 
 ApplyButton.addEventListener('click', () => {
-    let muscleChoice;
+    if (!document.querySelector("[data-MuscleSettings]").classList.contains("active")){
+        document.querySelector("[data-MuscleSettings]").classList.add('active');
+        videoCanvas.classList.add("hidden");
+        console.log("Worked")
+    }
 
     if (MuscleSelect.value != "All"){
         MuscleRadio.forEach((radio) => {
@@ -451,4 +461,48 @@ ApplyButton.addEventListener('click', () => {
     }   
 
     
+});
+
+
+GoButton.addEventListener('click', () => {
+    document.querySelector("[data-MuscleSettings]").classList.remove('active');
+    switch (muscleChoice) {
+        case "All":
+            videoCanvas.src = `./Vid/All.mp4`;
+            break;
+
+        case "TA":
+            videoCanvas.src = `./Vid/TaAndGas.mp4`;
+            break;
+
+
+        case "GAS":
+            videoCanvas.src = `./Body With Pads/GAS.png`;
+            break;
+
+        case "QUAD":
+            videoCanvas.src = `./Body With Pads/Quads.png`;
+            break;
+
+        case "HAM":
+            videoCanvas.src = `./Vid/HamAndQuad.mp4`;
+            break; 
+
+        case "GLUT":
+            videoCanvas.src = `./Vid/Gluteous maximumm.mp4`;
+            break;
+
+        case "ERECT":
+            videoCanvas.src = `./Vid/Erect.mp4`;
+            break;
+
+        default:
+            videoCanvas.src = "./Vid/All.mp4";
+            break;
+    }   
+
+
+
+
+    videoCanvas.classList.remove("hidden");
 });
