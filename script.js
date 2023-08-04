@@ -172,6 +172,28 @@ const GoButton = document.getElementById("Go");
 const videoCanvas = document.querySelector("[data-videoAnimation]");
 
 
+// Login out
+const ButtonLogOutPatient = document.querySelector("[data-LogOutPatient]");
+// PatientLogin disable 
+
+const ButtonLogOutClinician = document.querySelector("[data-LogOutClinician");
+const LogOutClinicianButoon = document.querySelector("[data-ClinicianLogOut]");
+
+
+// const WithIdToggle = document.querySelector('[data-WithId]');
+// const WithoutIdToggle = document.querySelector('[data-WithoutId]');
+
+
+
+ButtonLogOutPatient.addEventListener('click', () => {
+    PatientLogOut(false);
+});
+
+LogOutClinicianButoon.addEventListener('click', () => {
+    ClinicianIsLogedOut(false);
+});
+
+
 
 
 
@@ -181,14 +203,19 @@ const PatientIsLogedIn = Patient => {
         document.querySelector("[data-MuscleSettings]").classList.add('active');
         document.querySelector("[data-PatientLogedInOnly]").classList.remove('hidden');
         document.querySelector(".backgroundStyle.Patient").classList.add("hidden");
+        PatientLogin.classList.add('DisableButton');
+        ButtonLogOutPatient.classList.remove('DisableButton');
     }
 }
 
 const PatientLogOut = Patient => {
-    if (Patient === true){
+    if (Patient === false){
         document.querySelector("[data-BasicBackgroundQR]").classList.remove('active');
-        document.querySelector("[data-MuscleSettings]").classList.remove('active');   
-        
+        document.querySelector("[data-MuscleSettings]").classList.remove('active');
+        document.querySelector("[data-PatientLogedInOnly]").classList.add('hidden');
+        document.querySelector(".backgroundStyle.Patient").classList.remove("hidden");
+        PatientLogin.classList.remove('DisableButton');
+        ButtonLogOutPatient.classList.add('DisableButton');
     }
     
 }
@@ -201,6 +228,18 @@ const ClinicianIsLogedIn = Clinician => {
         document.querySelector("[data-clinicianOptionDropdown").classList.remove("hidden");
         document.querySelector("[data-ConfigNoClinician]").classList.add("hidden");
         document.querySelector("[data-ConfigWithClinician]").classList.remove("hidden");
+        ClinicianLogin.classList.add('DisableButton');
+        LogOutClinicianButoon.classList.remove('DisableButton');
+    }
+}
+
+const ClinicianIsLogedOut = Clinician => {
+    if (Clinician === false){
+        document.querySelector("[data-clinicianOptionDropdown").classList.add("hidden");
+        document.querySelector("[data-ConfigNoClinician]").classList.remove("hidden");
+        document.querySelector("[data-ConfigWithClinician]").classList.add("hidden");
+        ClinicianLogin.classList.remove('DisableButton');
+        LogOutClinicianButoon.classList.add('DisableButton');
     }
 }
 
@@ -252,6 +291,7 @@ ClinicianLogin.addEventListener('click', () => {
 WithIdToggle.addEventListener('click', () => {
     document.querySelector("[data-WithoutIdCheck]").classList.remove('active');
     document.querySelector("[data-WithIdCheck]").classList.add('active');
+    PatientLogOut(false);
     IDRequireSage = true;
     console.log(IDRequireSage);
 });
@@ -259,6 +299,8 @@ WithIdToggle.addEventListener('click', () => {
 WithoutIdToggle.addEventListener('click', () => {
     document.querySelector("[data-WithoutIdCheck]").classList.add('active');
     document.querySelector("[data-WithIdCheck]").classList.remove('active');
+    PatientIsLogedIn(true);
+    ButtonLogOutPatient.classList.add('DisableButton');
     IDRequireSage = false;
     console.log(IDRequireSage);
 });
