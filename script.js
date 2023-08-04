@@ -163,6 +163,12 @@ const MuscleAllCheckbox = document.querySelectorAll(".AllCheckbox");
 const MuscleRadio = document.querySelectorAll(".RadioChoice");
 // Non Document Functions
 
+const backgroundImage = document.getElementById("BackgrounBodyImage");
+const ApplyButton = document.querySelector("[data-apply]");
+
+
+
+
 const PatientIsLogedIn = Patient => {
     if (Patient === true){
         document.querySelector("[data-BasicBackgroundQR]").classList.add('active');
@@ -381,6 +387,7 @@ MuscleSelect.addEventListener('change', () => {
         MuscleAllCheckbox.forEach(CheckBox => {
             CheckBox.classList.remove("hidden");
         });
+        backgroundImage.src = `./Body With Pads/AllMuscles.png`;
     }
     else {
         MuscleRadio.forEach((radio) => {
@@ -390,4 +397,58 @@ MuscleSelect.addEventListener('change', () => {
             CheckBox.classList.add("hidden");
         });
     }
+});
+
+ApplyButton.addEventListener('click', () => {
+    let muscleChoice;
+
+    if (MuscleSelect.value != "All"){
+        MuscleRadio.forEach((radio) => {
+            if (radio.checked){
+                console.log(radio.value);
+                muscleChoice = radio.value;
+            }
+        });
+    } else {
+        muscleChoice = "All";
+    }
+
+    console.log(muscleChoice);
+
+    switch (muscleChoice) {
+        case "All":
+            backgroundImage.src = `./Body With Pads/AllMuscles.png`;
+            break;
+
+        case "TA":
+            backgroundImage.src = `./Body With Pads/TAs.png`;
+            break;
+
+
+        case "GAS":
+            backgroundImage.src = `./Body With Pads/GAS.png`;
+            break;
+
+        case "QUAD":
+            backgroundImage.src = `./Body With Pads/Quads.png`;
+            break;
+
+        case "HAM":
+            backgroundImage.src = `./Body With Pads/HamStrings.png`;
+            break; 
+
+        case "GLUT":
+            backgroundImage.src = `./Body With Pads/Gluts.png`;
+            break;
+
+        case "ERECT":
+            backgroundImage.src = `./Body With Pads/ErectSpinae.png`;
+            break;
+
+        default:
+            backgroundImage.src = "https://media.istockphoto.com/id/459951679/photo/male-anatomy-view.jpg?s=612x612&w=0&k=20&c=-T2Zk12yDJgrF3T2XPz80ThaC_vZKh-s7qCYQwXNAXA=";
+            break;
+    }   
+
+    
 });
