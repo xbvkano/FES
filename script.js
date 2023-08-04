@@ -135,7 +135,7 @@ class Login{
 
 
 // Creationg of variables
-const ID = new Login('9', '9');
+const ID = new Login('89101', '701');
 const NumberButtons = document.querySelectorAll('[data-number]');
 
 const SubmitIDForVerify = document.querySelector('[data-SubmitID]');
